@@ -13,11 +13,8 @@ public class SalesforceHomePage  extends PageObject{
     @FindBy (xpath = "//a[text()='Sales']")
     WebElement salesAppLauncher;
 
-    @FindBy (xpath = "//span[text()='Opportunities']")
-    WebElement opportunityTab;
 
-
-    public void logIntoSalesfroce(String userName, String password){
+    public void logIntoSalesfroce(String userName, String password) {
 
         $("#username").clear();
         $("#username").sendKeys(userName);
@@ -31,7 +28,6 @@ public class SalesforceHomePage  extends PageObject{
     public void navigateSalesApp(){
         $(".slds-icon-waffle").click();
         salesAppLauncher.click();
-        opportunityTab.click();
     }
 
 
